@@ -9,7 +9,8 @@ import ManagBook from '../component/ManagBook';
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home></Home>
+      element: <Home></Home>,
+      loader: () => fetch('http://localhost:5000/book')
     },
     {
         path: '/order',
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/admin/manageBook',
-            element: <ManagBook></ManagBook>
+            element: <ManagBook></ManagBook>,
+            loader: () => fetch('http://localhost:5000/book')
           },
           {
             path: '/admin/addbook',
