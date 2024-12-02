@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EditBook = () => {
     return (
@@ -34,7 +35,8 @@ const EditBook = () => {
                         <input type="text" name="name" placeholder="photo url" className="input w-full input-bordered" />
                     </div>
                 </div>
-                <div className='flex justify-end'>
+                <div className='flex justify-end gap-3'>
+                    <Link to='/admin/manageBook' className='bg-bgbton text-white rounded-md p-2 mt-5'>Back</Link>
                     <button type='submit' className='bg-bgbton text-white rounded-md p-2 mt-5'>Edit Book</button>
                 </div>
             </form>

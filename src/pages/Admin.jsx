@@ -10,7 +10,7 @@ const Admin = () => {
                 <Navbar></Navbar>
             </nav>
             <main>
-                <div className='grid grid-cols-6 md:h-[500px] md:grid-cols-12'>
+                <div className='grid grid-cols-6 md:min-h-[500px] md:grid-cols-12'>
                     <div className='col-span-2  space-y-3 text-center bg-bgbton text-white'>
                     <h2 className='pt-5 text-3xl font-extrabold'>Book shop</h2>
                      <NavLink to='/admin/manageBook' className='flex pl-8 justify-start p-2 items-center gap-3'>
@@ -21,10 +21,10 @@ const Admin = () => {
                         <img src="https://i.ibb.co/y6R6RYJ/plus-1.png" className='w-5' alt="" />
                         <p>Add Book</p>
                      </NavLink>
-                     <NavLink to='/admin/editbook' className='flex pl-8 justity-start p-2 items-center gap-3'>
+                     {/* <NavLink to='/admin/editbook' className='flex pl-8 justity-start p-2 items-center gap-3'>
                         <img src="https://i.ibb.co/dpSbtk5/edit-1.png" className='w-5' alt="" />
                         <p>Edit book</p>
-                     </NavLink>
+                     </NavLink> */}
                   
                 </div>
                     <div className='col-span-10 bg-[#F4F7FC]'>
