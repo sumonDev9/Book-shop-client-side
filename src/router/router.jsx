@@ -21,6 +21,11 @@ const router = createBrowserRouter([
         element: <Admin></Admin>,
         children: [
           {
+            index: true, // Default route
+            element: <ManagBook></ManagBook>,
+            loader: () => fetch('http://localhost:5000/book'),
+        },
+          {
             path: '/admin/manageBook',
             element: <ManagBook></ManagBook>,
             loader: () => fetch('http://localhost:5000/book')
