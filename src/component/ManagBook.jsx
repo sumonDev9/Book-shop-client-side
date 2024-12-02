@@ -82,7 +82,7 @@ const ManagBook = () => {
                                     <td>{book.author}</td>
                                     <td>{book.price}</td>
                                     <td className='text-center flex gap-2 items-center'>
-                                        <Link to='/admin/editbook'>
+                                        <Link to={`/admin/manageBook/editbook/${book._id}`} >
                                             <MdOutlineEdit  className='text-2xl cursor-pointer' />
                                         </Link>
                                         <button>

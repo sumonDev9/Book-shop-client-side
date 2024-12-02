@@ -29,17 +29,21 @@ const router = createBrowserRouter([
             path: '/admin/manageBook',
             element: <ManagBook></ManagBook>,
             loader: () => fetch('http://localhost:5000/book')
+
           },
           {
             path: '/admin/addbook',
             element: <AddBook></AddBook>
           },
           {
-            path: '/admin/editbook',
-            element: <EditBook></EditBook>
+            path: '/admin/manageBook/editbook/:id',
+            element: <EditBook></EditBook>,
+            loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
           }
         ]
+      
     },
+    
     
   ]);
 
