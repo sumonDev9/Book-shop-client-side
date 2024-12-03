@@ -21,12 +21,7 @@ const Admin = () => {
                         <img src="https://i.ibb.co/y6R6RYJ/plus-1.png" className='w-5' alt="" />
                         <p>Add Book</p>
                      </NavLink>
-                     {/* <NavLink to='/admin/editbook' className='flex pl-8 justity-start p-2 items-center gap-3'>
-                        <img src="https://i.ibb.co/dpSbtk5/edit-1.png" className='w-5' alt="" />
-                        <p>Edit book</p>
-                     </NavLink> */}
-                  
-                </div>
+                   </div>
                     <div className='col-span-10 bg-[#F4F7FC]'>
                     <Outlet></Outlet>
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Swal from 'sweetalert2';
 
 const AddBook = () => {
-
+    
     const handleAddBook = e => {
         e.preventDefault();
         const form = e.target;
@@ -23,7 +23,6 @@ const AddBook = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             form.reset();
             if(data.insertedId){
                 Swal.fire({

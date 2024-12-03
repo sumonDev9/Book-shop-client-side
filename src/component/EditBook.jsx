@@ -17,6 +17,7 @@ const EditBook = () => {
 
         const newBook = {name, author, price, photo};
        
+       
         // send to data server
         fetch(`http://localhost:5000/book/${_id}`, {
             method:'PUT',

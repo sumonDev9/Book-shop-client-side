@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { RiDeleteBin5Line } from "react-icons/ri";
 import Swal from 'sweetalert2';
@@ -6,6 +6,16 @@ import { MdOutlineEdit } from 'react-icons/md';
 const ManagBook = () => {
     const loadedBook = useLoaderData();
     const [books, setBooks] = useState(loadedBook);
+    const [search, setSearch] = useState("");
+
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/book?searchParams=${search}`)
+        .then(res => res.json())
+        .then(data => {
+            setBooks(data)
+        })
+    },[search]);
 
     const handleBookDelete = id => {
         Swal.fire({
@@ -46,7 +56,10 @@ const ManagBook = () => {
                 <h1 className='text-primary font-bold text-2xl ml-12 pt-5'>Book List</h1>
                 <div>
                     <label className="input input-bordered flex items-center gap-2">
-                        <input type="text" className="grow" placeholder="Search" />
+                        <input
+                        onChange={(e) => setSearch(e.target.value)}
+                         type="text"
+                         className="grow" placeholder="Search" />
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 16 16"
